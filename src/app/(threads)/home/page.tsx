@@ -2,7 +2,7 @@ import Skeleton from '@/components/atoms/Skeleton';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
-export default async function Home() {
+export default function Page() {
   return (
     <div className='flex flex-col items-center justify-between'>
       <div className='mb-2'>
