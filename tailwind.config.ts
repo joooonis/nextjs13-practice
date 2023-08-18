@@ -19,10 +19,10 @@ const config: Config = {
         },
       },
       screens: {
-        mo: '415px',
+        mobile: '415px',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
 export default config;
