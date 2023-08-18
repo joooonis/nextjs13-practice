@@ -4,7 +4,7 @@ export default async function Home() {
   const data = await getData();
 
   return (
-    <div className='flex flex-col items-center justify-between overflow-y-scroll max-h-screen'>
+    <div className='flex flex-col items-center justify-between'>
       <div className='mb-2'>
         <Image src={'/threads-logo.png'} width={24} height={24} alt='logo' />
       </div>

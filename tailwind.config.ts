@@ -18,9 +18,6 @@ const config: Config = {
           purple: '#8A2BE2',
         },
       },
-      screens: {
-        mobile: '415px',
-      },
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],

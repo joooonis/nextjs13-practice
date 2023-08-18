@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Navigation() {
   const pathname = usePathname();
   return (
-    <nav className='flex mo:absolute fixed bottom-0 bg-primary-white rounded-t-lg justify-between items-center h-16 w-full'>
+    <nav className='flex fixed max-w-[415px] bottom-0 bg-primary-white rounded-t-lg justify-between items-center h-16 w-full'>
       <ul className='w-full flex items-center justify-between px-4'>
         <li className='flex items-center'>
           <Link href='/home'>
