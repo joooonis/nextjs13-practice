@@ -1,10 +1,13 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import {
+  usePathname,
+} from 'next/navigation';
 import Link from 'next/link';
 
 export default function Navigation() {
   const pathname = usePathname();
+
   return (
     <nav className='flex fixed max-w-[415px] bottom-0 bg-primary-white rounded-t-lg justify-between items-center h-16 w-full'>
       <ul className='w-full flex items-center justify-between px-4'>
@@ -15,7 +18,7 @@ export default function Navigation() {
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth='2'
-              stroke={pathname === '/home' ? 'currentColor' : 'gray'}
+              stroke={pathname.indexOf('/home') > -1 ? 'currentColor' : 'gray'}
               className='w-6 h-6'>
               <path
                 strokeLinecap='round'
@@ -32,7 +35,9 @@ export default function Navigation() {
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth='2'
-              stroke={pathname === '/search' ? 'currentColor' : 'gray'}
+              stroke={
+                pathname.indexOf('/search') > -1 ? 'currentColor' : 'gray'
+              }
               className='w-6 h-6'>
               <path
                 strokeLinecap='round'
@@ -49,7 +54,7 @@ export default function Navigation() {
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth='2'
-              stroke={pathname === '/post' ? 'currentColor' : 'gray'}
+              stroke={pathname.indexOf('/post') > -1 ? 'currentColor' : 'gray'}
               className='w-6 h-6'>
               <path
                 strokeLinecap='round'
@@ -83,7 +88,9 @@ export default function Navigation() {
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth='2'
-              stroke={pathname === '/profile' ? 'currentColor' : 'gray'}
+              stroke={
+                pathname.indexOf('/profile') > -1 ? 'currentColor' : 'gray'
+              }
               className='w-6 h-6'>
               <path
                 strokeLinecap='round'
