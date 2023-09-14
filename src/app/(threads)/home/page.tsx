@@ -1,21 +1,4 @@
-import Skeleton from '@/components/atoms/Skeleton';
-import Image from 'next/image';
-import { Suspense } from 'react';
-
-export default function Page() {
-  return (
-    <div className='flex flex-col items-center justify-between'>
-      <div className='mb-2'>
-        <Image src={'/threads-logo.png'} width={24} height={24} alt='logo' />
-      </div>
-      <Suspense fallback={<Skeleton />}>
-        <PostList />
-      </Suspense>
-    </div>
-  );
-}
-
-async function PostList() {
+export default async function Page() {
   const data = await getData();
   return (
     <ul className='space-y-4 divide-y divide-gray-500'>
@@ -41,7 +24,7 @@ interface Post {
   body: string;
 }
 
-async function getData(): Promise<Array<Post>> {
+async function getData(): Promise<Post[]> {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
