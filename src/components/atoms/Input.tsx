@@ -12,7 +12,9 @@ const Input = forwardRef<HTMLInputElement, MyInputProps>(
         <input ref={ref} {...rest} />
       </label>
     );
-  }
+  },
 );
 
 export default Input;
+
+Input.displayName = 'Input';

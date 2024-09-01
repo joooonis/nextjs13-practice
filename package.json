@@ -26,6 +26,10 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "clsx": "^2.0.0"
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "clsx": "^2.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
   }
 }

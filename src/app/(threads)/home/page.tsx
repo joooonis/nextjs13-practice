@@ -4,7 +4,7 @@ export default async function Page() {
   const data = await getPost();
   return (
     <ul className='space-y-4 divide-y divide-gray-500'>
-      {data.slice(0, 10).map((post) => (
+      {data.slice(0, 10).map(post => (
         <Link href={`/home/${post.id}`} key={post.id}>
           <li className='flex space-x-2 pt-4'>
             <div className='mr-2'>

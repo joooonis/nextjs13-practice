@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
           'bg-primary-black text-primary-white': variant === 'solid',
           'bg-prtext-primary-white hover:bg-gray-100 border-2 border-gray-300':
             variant === 'outline',
-        }
+        },
       )}
       {...props}>
       {children}

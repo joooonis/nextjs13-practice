@@ -10,11 +10,13 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
     "next/core-web-vitals"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/ban-types": "off", // {} 타입 허용
     "@typescript-eslint/no-explicit-any": "warn", // any 타입 경고
     "no-unused-vars": "off",
